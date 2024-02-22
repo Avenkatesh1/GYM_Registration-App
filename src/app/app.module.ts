@@ -20,6 +20,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NgToastModule } from 'ng-angular-popup';
@@ -59,6 +60,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     MatCardModule,
     MatListModule,
     MatChipsModule,
+    MatTooltipModule,
 
     NgToastModule,
     NgConfirmModule
