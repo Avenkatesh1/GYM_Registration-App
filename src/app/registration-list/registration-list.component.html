@@ -1,9 +1,7 @@
-<div class="d-flex justify-content-between">
-  <button routerLink="/register" mat-raised-button color="accent"><i class="fa fa-arrow-left" aria-hidden="true"></i>
-    Back
-    to
-    Registration</button>
-  <mat-form-field appearance="outline">
+<div class="d-flex justify-content-between ">
+  <button routerLink="/register" class="p-3" mat-raised-button color="accent"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Back To Registration</button>
+  <mat-form-field appearance="outline" class="filter">
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Firstname" #input>
   </mat-form-field>
@@ -69,11 +67,11 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
       <td mat-cell *matCellDef="let row">
-        <button mat-icon-button [routerLink]="['/detail', row.id]" class="mx-2" color="warn"><i class="fa fa-eye"
+        <button mat-icon-button [routerLink]="['/detail', row.id]" class="mx-2" color="warn" matTooltip="View"><i class="fa fa-eye"
             aria-hidden="true"></i></button>
-        <button mat-icon-button (click)="edit(row.id)" class="mx-2" color="accent"><i class="fa fa-pencil"
+        <button mat-icon-button (click)="edit(row.id)" class="mx-2" color="accent" matTooltip="Edit"><i class="fa fa-pencil"
             aria-hidden="true"></i></button>
-        <button (click)="deleteUser(row.id)" mat-icon-button color="primary"><i class="fa fa-trash"
+        <button (click)="deleteUser(row.id)" mat-icon-button color="primary" matTooltip="Delete"><i class="fa fa-trash"
             aria-hidden="true"></i></button>
       </td>
     </ng-container>
